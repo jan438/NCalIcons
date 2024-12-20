@@ -1,7 +1,14 @@
 import os
+import sys
 from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
+
+if sys.platform[0] == 'l':
+    path = '/home/jan/git/NCalIcons'
+if sys.platform[0] == 'w':
+    path = "C:/Users/janbo/OneDrive/Documents/GitHub/NCalIcons"
+os.chdir(path)
  
 # Open an Image
 img = Image.open('Ent1.png')
