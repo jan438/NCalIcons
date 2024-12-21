@@ -9,6 +9,8 @@ if sys.platform[0] == 'l':
 if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/NCalIcons"
 os.chdir(path)
+
+fontsize = 75
  
 # Open an Image
 img = Image.open('Icons/Ent1.png')
@@ -17,9 +19,9 @@ img = Image.open('Icons/Ent1.png')
 I1 = ImageDraw.Draw(img)
 
 if sys.platform[0] == 'l': 
-    myFont = ImageFont.truetype('C:/Fonts/Arial.ttf', 75)
+    myFont = ImageFont.truetype('C:/Fonts/Arial.ttf', fontsize)
 if sys.platform[0] == 'w':
-    myFont = ImageFont.truetype('C:/Users/janbo/Fonts/Arial.ttf', 75)
+    myFont = ImageFont.truetype('C:/Users/janbo/Fonts/Arial.ttf', fontsize)
  
 # Add Text to an image
 I1.text((60, 600), "164", font=myFont, fill = (200, 200, 200))
