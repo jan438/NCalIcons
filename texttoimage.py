@@ -17,7 +17,7 @@ img = Image.open('Ent1.png')
 I1 = ImageDraw.Draw(img)
 
 # Custom font style and font size
-myFont = ImageFont.truetype('FreeMono.ttf', 200)
+myFont = ImageFont.truetype('C:/Fonts/Arial.ttf', 200)
  
 # Add Text to an image
 I1.text((10, 10), "Nice Car", font=myFont, fill =(255, 0, 0))
