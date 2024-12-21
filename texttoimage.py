@@ -11,7 +11,7 @@ if sys.platform[0] == 'w':
 os.chdir(path)
  
 # Open an Image
-img = Image.open('Ent1.png')
+img = Image.open('Icons/Ent1.png')
  
 # Call draw Method to add 2D graphics in an image
 I1 = ImageDraw.Draw(img)
