@@ -4,6 +4,14 @@ from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
 
+def merge(im1: Image.Image, im2: Image.Image):
+    w = im1.size[0] + im2.size[0]
+    h = max(im1.size[1], im2.size[1])
+    im = Image.new("RGBA", (w, h))
+    im.paste(im1)
+    im.paste(im2, (im1.size[0], 0))
+    return im
+    
 if sys.platform[0] == 'l':
     path = '/home/jan/git/NCalIcons'
 if sys.platform[0] == 'w':
@@ -31,9 +39,12 @@ height = 1536
 deltax = width / 8
 deltay = height / 8
  
-img = Image.open('Icons/Ent1.png')
+img1 = Image.open('Icons/Ent1.png')
+img2 = Image.open('Icons/Ent2.png')
+
+img = merge(img1, img2)
  
-I1 = ImageDraw.Draw(img)
+I = ImageDraw.Draw(img)
 
 if sys.platform[0] == 'l': 
     myFont = ImageFont.truetype('/home/jan/Fonts/Arial.ttf', fontsize)
@@ -44,10 +55,10 @@ posy = starty
 for i in range(numrows):
     posx = startx
     for j in range(numcols):
-        I1.text((posx, posy), entindexes[i][j], font = myFont, fill = fontcolor)
+        I.text((posx, posy), entindexes[i][j], font = myFont, fill = fontcolor)
         posx = posx + deltax           
     posy = posy + deltay
  
-img.save("Indexes/Ent1s.png")
+img.save("Indexes/Ent.png")
 
 key = input("Wait")
