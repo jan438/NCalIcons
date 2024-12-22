@@ -40,7 +40,11 @@ deltax = width / 8
 deltay = height / 8
  
 img1 = Image.open('Icons/Ent1.png')
+box1 = (0, 0, 1537, 1100)
+img1 = img1.crop(box1)
 img2 = Image.open('Icons/Ent2.png')
+box2 = (0, 500, 1537, 1100)
+img2 = img2.crop(box2)
 
 img = merge(img1, img2)
  
