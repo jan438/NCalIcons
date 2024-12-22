@@ -24,7 +24,7 @@ img = Image.open('Icons/Ent1.png')
 I1 = ImageDraw.Draw(img)
 
 if sys.platform[0] == 'l': 
-    myFont = ImageFont.truetype('C:/Fonts/Arial.ttf', fontsize)
+    myFont = ImageFont.truetype('/home/jan/Fonts/Arial.ttf', fontsize)
 if sys.platform[0] == 'w':
     myFont = ImageFont.truetype('C:/Users/janbo/Fonts/Arial.ttf', fontsize)
  
