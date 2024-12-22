@@ -9,9 +9,19 @@ if sys.platform[0] == 'l':
 if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/NCalIcons"
 os.chdir(path)
-
 numcols = 8
 numrows = 5
+entindexes = [[0 for i in range(numcols)] for j in range(numrows)]
+entindexes[0][0] = "164"
+#entindexes[] = [[164,164,164,164,164,164,164,164],
+#              [164,164,164,164,164,164,164,164],
+#              [164,164,164,164,164,164,164,164],
+#              [164,164,164,164,164,164,164,164],
+#              [164,164,164,164,164,164,164,164],
+#              [164,164,164,164,164,164,164,164],
+#              [164,164,164,164,164,164,164,164],
+#              [164,164,164,164,164,164,164,164],
+#              [164,164,164,164,164,164,164,164]]
 
 fontsize = 75
 fontcolor = (200, 200, 200)
@@ -35,7 +45,7 @@ posy = starty
 for i in range(numrows):
     posx = startx
     for j in range(numcols):
-        I1.text((posx, posy), "164", font = myFont, fill = fontcolor)
+        I1.text((posx, posy), entindexes[0][0], font = myFont, fill = fontcolor)
         posx = posx + deltax           
     posy = posy + deltay
  
