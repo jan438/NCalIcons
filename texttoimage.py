@@ -10,6 +10,9 @@ if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/NCalIcons"
 os.chdir(path)
 
+numcols = 8
+numrows = 5
+
 fontsize = 75
 fontcolor = (200, 200, 200)
 startx = 0
@@ -27,10 +30,14 @@ if sys.platform[0] == 'l':
     myFont = ImageFont.truetype('/home/jan/Fonts/Arial.ttf', fontsize)
 if sys.platform[0] == 'w':
     myFont = ImageFont.truetype('C:/Users/janbo/Fonts/Arial.ttf', fontsize)
- 
-I1.text((startx + deltax, starty + deltay), "164", font=myFont, fill = fontcolor)
-I1.text((startx + 2 * deltax, starty + deltay), "164", font=myFont, fill = fontcolor)
-I1.text((startx + deltax, starty + 2 * deltay), "164", font=myFont, fill = fontcolor)
+
+posy = starty
+for i in range(numrows):
+    posx = startx
+    for j in range(numcols):
+        I1.text((posx, posy), "164", font = myFont, fill = fontcolor)
+        posx = posx + deltax           
+    posy = posy + deltay
  
 img.save("Indexes/Ent1s.png")
 
