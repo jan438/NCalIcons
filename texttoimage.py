@@ -31,14 +31,14 @@ entindexes = [["164","164","164","164","164","164","164","164"],
               ["164","164","164","164","164","164","164","164"],
               ["164","164","164","164","164","164","164","164"]]
 
-fontsize = 75
+fontsize = 60
 fontcolor = (200, 200, 200)
-startx = 0
-starty = 40
-width = 1537
+startx = 75
+starty = 350
+width = 1400
 height = 1536
-deltax = width / 10
-deltay = height / 10
+deltax = width / numcols
+deltay = height / numrows
  
 img1 = Image.open('Icons/Ent1.png')
 box1 = (0, 0, 1537, 1100)
