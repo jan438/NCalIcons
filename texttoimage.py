@@ -32,9 +32,9 @@ entindexes = [["164","164","164","164","164","164","164","164"],
               ["164","164","164","164","164","164","164","164"]]
 
 fontsize = 60
-fontcolor = (200, 200, 200)
+fontcolor = (0, 0, 0)
 startx = 75
-starty = 350
+starty = 300
 width = 1400
 height = 1536
 deltax = width / numcols
