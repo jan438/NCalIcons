@@ -33,7 +33,7 @@ entindexes = [["263","225","264","264","264","265","164","176"],
 
 fontsize = 60
 fontcolor = (0, 0, 0)
-startx = 85
+startx = 100
 starty = 300
 width = 1400
 height = 1536
