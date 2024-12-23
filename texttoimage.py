@@ -18,9 +18,10 @@ if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/NCalIcons"
 os.chdir(path)
 numcols = 8
-numrows = 9
+numrows = 10
 entindexes = [[0 for i in range(numcols)] for j in range(numrows)]
 entindexes = [["164","164","164","164","164","164","164","164"],
+              ["164","164","164","164","164","164","164","164"],
               ["164","164","164","164","164","164","164","164"],
               ["164","164","164","164","164","164","164","164"],
               ["164","164","164","164","164","164","164","164"],
@@ -33,11 +34,11 @@ entindexes = [["164","164","164","164","164","164","164","164"],
 fontsize = 75
 fontcolor = (200, 200, 200)
 startx = 0
-starty = 0
+starty = 40
 width = 1537
 height = 1536
-deltax = width / 8
-deltay = height / 8
+deltax = width / 10
+deltay = height / 10
  
 img1 = Image.open('Icons/Ent1.png')
 box1 = (0, 0, 1537, 1100)
