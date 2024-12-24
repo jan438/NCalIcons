@@ -58,6 +58,17 @@ othersindexes = [["263","225","264","264","264","265","164","176"],
               ["164","164","164","164","164","164","164","164"],
               ["164","164","164","164","164","164","164","164"],
               ["164","164","164","164","164","164","164","164"]]
+workindexes = [[0 for i in range(numcols)] for j in range(numrows)]
+workindexes = [["263","225","264","264","264","265","164","176"],
+              ["152","164","164","164","164","164","164","164"],
+              ["164","164","164","164","164","164","164","164"],
+              ["164","164","164","164","164","164","164","164"],
+              ["164","164","164","164","164","164","164","164"],
+              ["164","164","164","164","164","164","164","164"],
+              ["164","164","164","164","164","164","164","164"],
+              ["164","164","164","164","164","164","164","164"],
+              ["164","164","164","164","164","164","164","164"],
+              ["164","164","164","164","164","164","164","164"]]
 width = 1400
 height = 1536
 deltax = width / numcols
@@ -118,5 +129,25 @@ for i in range(numrows):
         posx = posx + deltax           
     posy = posy + deltay
 img.save("Indexes/Others.png")
+width = 1400
+height = 1536
+deltax = width / numcols
+deltay = height / numrows
+img1 = Image.open('Icons/Work1.png')
+box1 = (0, 0, 1537, 1100)
+img1 = img1.crop(box1)
+img2 = Image.open('Icons/Work2.png')
+box2 = (0, 320, 1537, 1100)
+img2 = img2.crop(box2)
+img = merge(img1, img2)
+I = ImageDraw.Draw(img)
+posy = starty
+for i in range(numrows):
+    posx = startx
+    for j in range(numcols):
+        I.text((posx, posy), workindexes[i][j], font = myFont, fill = fontcolor)
+        posx = posx + deltax           
+    posy = posy + deltay
+img.save("Indexes/Work.png")
 
 key = input("Wait")
