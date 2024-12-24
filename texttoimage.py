@@ -12,7 +12,10 @@ def merge(im1: Image.Image, im2: Image.Image):
     im.paste(im2, (0, im1.size[1]))
     return im
 
-fontsize = 60    
+fontsize = 60
+fontcolor = (0, 0, 0)
+startx = 100
+starty = 300
 if sys.platform[0] == 'l':
     path = '/home/jan/git/NCalIcons'
     myFont = ImageFont.truetype('/home/jan/Fonts/Arial.ttf', fontsize)
@@ -33,10 +36,6 @@ entindexes = [["263","225","264","264","264","265","164","176"],
               ["164","164","164","164","164","164","164","164"],
               ["164","164","164","164","164","164","164","164"],
               ["164","164","164","164","164","164","164","164"]]
-
-fontcolor = (0, 0, 0)
-startx = 100
-starty = 300
 width = 1400
 height = 1536
 deltax = width / numcols
