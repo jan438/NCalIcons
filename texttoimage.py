@@ -16,6 +16,7 @@ fontsize = 60
 fontcolor = (0, 0, 0)
 startx = 100
 starty = 300
+numcols = 8
 if sys.platform[0] == 'l':
     path = '/home/jan/git/NCalIcons'
     myFont = ImageFont.truetype('/home/jan/Fonts/Arial.ttf', fontsize)
@@ -23,7 +24,6 @@ if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/NCalIcons"
     myFont = ImageFont.truetype('C:/Users/janbo/Fonts/Arial.ttf', fontsize)
 os.chdir(path)
-numcols = 8
 numrows = 10
 entindexes = [[0 for i in range(numcols)] for j in range(numrows)]
 entindexes = [["263","225","264","264","264","265","164","176"],
