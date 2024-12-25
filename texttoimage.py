@@ -34,7 +34,6 @@ if sys.platform[0] == 'w':
     myFont = ImageFont.truetype('C:/Users/janbo/Fonts/Arial.ttf', fontsize)
 os.chdir(path)
 numrows = 10
-lastindex = 4
 entindexes = [[0 for i in range(numcols)] for j in range(numrows)]
 entindexes = [["263","225","264","264","264","265","164","176"], #1
               ["152","164","164","164","164","164","164","164"], #2
@@ -59,12 +58,16 @@ img2 = img2.crop(box2)
 img = merge2(img1, img2)
 I = ImageDraw.Draw(img)
 posy = starty
-for i in range(numrows):
+for i in range(numrows - 1):
     posx = startx
     for j in range(numcols):
         I.text((posx, posy), entindexes[i][j], font = myFont, fill = fontcolor)
         posx = posx + deltax           
     posy = posy + deltay
+    posx = startx
+for j in range(5):
+    I.text((posx, posy), entindexes[9][j], font = myFont, fill = fontcolor)
+    posx = posx + deltax
 img.save("Indexes/Ent.png")
 numrows = 10
 generalindexes = [[0 for i in range(numcols)] for j in range(numrows)]
