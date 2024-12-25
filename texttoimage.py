@@ -130,7 +130,6 @@ for i in range(numrows):
     posy = posy + deltay
 img.save("Indexes/Others.png")
 numrows = 11
-lastindex = 4
 workindexes = [[0 for i in range(numcols)] for j in range(numrows)]
 workindexes = [["030","225","264","264","264","265","164","176"], #1
               ["152","164","164","164","164","164","164","164"],  #2
@@ -159,12 +158,16 @@ img3 = img3.crop(box3)
 img = merge3(img1, img2, img3)
 I = ImageDraw.Draw(img)
 posy = starty
-for i in range(numrows):
+for i in range(numrows - 1):
     posx = startx
     for j in range(numcols):
         I.text((posx, posy), workindexes[i][j], font = myFont, fill = fontcolor)
         posx = posx + deltax           
     posy = posy + deltay
+posx = startx
+for j in range(6):
+    I.text((posx, posy), workindexes[10][j], font = myFont, fill = fontcolor)
+    posx = posx + deltax  
 img.save("Indexes/Work.png")
 
 key = input("Wait")
