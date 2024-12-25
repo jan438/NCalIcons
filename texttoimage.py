@@ -110,14 +110,14 @@ othersindexes = [["214","225","264","264","264","265","164","176"], #1
               ["164","164","164","164","164","164","164","164"],  #6
               ["164","164","164","164","164","224","XXX","XXX"]]  #7
 width = 1400
-height = 1200
+height = 1150
 deltax = width / numcols
 deltay = height / numrows
 img1 = Image.open('Icons/Others1.png')
 box1 = (0, 0, 1537, 1100)
 img1 = img1.crop(box1)
 img2 = Image.open('Icons/Others2.png')
-box2 = (0, 750, 1537, 1100)
+box2 = (0, 780, 1537, 1100)
 img2 = img2.crop(box2)
 img = merge2(img1, img2)
 I = ImageDraw.Draw(img)
