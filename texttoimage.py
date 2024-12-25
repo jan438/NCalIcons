@@ -110,7 +110,7 @@ othersindexes = [["214","225","264","264","264","265","164","176"], #1
               ["164","164","164","164","164","164","164","164"],  #6
               ["164","164","164","164","164","224","XXX","XXX"]]  #7
 width = 1400
-height = 1150
+height = 1080
 deltax = width / numcols
 deltay = height / numrows
 img1 = Image.open('Icons/Others1.png')
