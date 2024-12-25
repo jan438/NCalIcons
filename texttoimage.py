@@ -34,6 +34,7 @@ if sys.platform[0] == 'w':
     myFont = ImageFont.truetype('C:/Users/janbo/Fonts/Arial.ttf', fontsize)
 os.chdir(path)
 numrows = 10
+lastindex = 4
 entindexes = [[0 for i in range(numcols)] for j in range(numrows)]
 entindexes = [["263","225","264","264","264","265","164","176"],
               ["152","164","164","164","164","164","164","164"],
@@ -65,6 +66,8 @@ for i in range(numrows):
         posx = posx + deltax           
     posy = posy + deltay
 img.save("Indexes/Ent.png")
+numrows = 10
+lastindex = 4
 generalindexes = [[0 for i in range(numcols)] for j in range(numrows)]
 generalindexes = [["263","225","264","264","264","265","164","176"],
               ["152","164","164","164","164","164","164","164"],
@@ -96,6 +99,8 @@ for i in range(numrows):
         posx = posx + deltax           
     posy = posy + deltay
 img.save("Indexes/General.png")
+numrows = 10
+lastindex = 4
 othersindexes = [[0 for i in range(numcols)] for j in range(numrows)]
 othersindexes = [["263","225","264","264","264","265","164","176"],
               ["152","164","164","164","164","164","164","164"],
@@ -127,6 +132,8 @@ for i in range(numrows):
         posx = posx + deltax           
     posy = posy + deltay
 img.save("Indexes/Others.png")
+numrows = 10
+lastindex = 4
 workindexes = [[0 for i in range(numcols)] for j in range(numrows)]
 workindexes = [["263","225","264","264","264","265","164","176"],
               ["152","164","164","164","164","164","164","164"],
