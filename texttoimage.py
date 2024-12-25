@@ -129,7 +129,7 @@ I = ImageDraw.Draw(img)
 posy = starty
 for i in range(numrows - 1):
     posx = startx
-    for j in range(numcols - 1):
+    for j in range(numcols):
         I.text((posx, posy), othersindexes[i][j], font = myFont, fill = fontcolor)
         posx = posx + deltax           
     posy = posy + deltay
