@@ -67,7 +67,6 @@ for i in range(numrows):
     posy = posy + deltay
 img.save("Indexes/Ent.png")
 numrows = 10
-lastindex = 3
 generalindexes = [[0 for i in range(numcols)] for j in range(numrows)]
 generalindexes = [["112","225","264","264","264","265","164","176"], #1
               ["112","164","164","164","164","164","164","164"], #2
@@ -92,12 +91,16 @@ img2 = img2.crop(box2)
 img = merge2(img1, img2)
 I = ImageDraw.Draw(img)
 posy = starty
-for i in range(numrows):
+for i in range(numrows - 1):
     posx = startx
     for j in range(numcols):
         I.text((posx, posy), generalindexes[i][j], font = myFont, fill = fontcolor)
         posx = posx + deltax           
     posy = posy + deltay
+posx = startx
+for j in range(4):
+    I.text((posx, posy), generalindexes[9][j], font = myFont, fill = fontcolor)
+    posx = posx + deltax  
 img.save("Indexes/General.png")
 numrows = 7
 othersindexes = [[0 for i in range(numcols)] for j in range(numrows)]
