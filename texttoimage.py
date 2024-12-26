@@ -80,7 +80,7 @@ generalindexes = [["112","225","264","264","264","265","164","176"], #1
               ["164","164","164","164","164","164","164","164"], #7
               ["164","164","164","279"]] #8
 width = 1400
-height = 1536
+height = 1260
 deltax = width / numcols
 deltay = height / numrows
 img1 = Image.open('Icons/General1.png')
