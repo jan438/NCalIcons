@@ -69,7 +69,7 @@ for j in range(5):
     I.text((posx, posy), entindexes[9][j], font = myFont, fill = fontcolor)
     posx = posx + deltax
 img.save("Indexes/Ent.png")
-numrows = 10
+numrows = 8
 generalindexes = [[0 for i in range(numcols)] for j in range(numrows)]
 generalindexes = [["112","225","264","264","264","265","164","176"], #1
               ["112","164","164","164","164","164","164","164"], #2
@@ -78,9 +78,7 @@ generalindexes = [["112","225","264","264","264","265","164","176"], #1
               ["164","164","164","164","164","164","164","164"], #5
               ["164","164","164","164","164","164","164","164"], #6
               ["164","164","164","164","164","164","164","164"], #7
-              ["164","164","164","164","164","164","164","164"], #8
-              ["164","164","164","164","164","164","164","164"], #9
-              ["164","164","164","279"]] #10
+              ["164","164","164","279"]] #8
 width = 1400
 height = 1536
 deltax = width / numcols
@@ -102,7 +100,7 @@ for i in range(numrows - 1):
     posy = posy + deltay
 posx = startx
 for j in range(4):
-    I.text((posx, posy), generalindexes[9][j], font = myFont, fill = fontcolor)
+    I.text((posx, posy), generalindexes[7][j], font = myFont, fill = fontcolor)
     posx = posx + deltax  
 img.save("Indexes/General.png")
 numrows = 7
