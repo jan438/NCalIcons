@@ -33,6 +33,7 @@ if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/NCalIcons"
     myFont = ImageFont.truetype('C:/Users/janbo/Fonts/Arial.ttf', fontsize)
 os.chdir(path)
+
 numrows = 10
 entindexes = [[0 for i in range(numcols)] for j in range(numrows)]
 entindexes = [["263","225","171","266","264","265","153","176"], #1
@@ -69,6 +70,7 @@ for j in range(5):
     I.text((posx, posy), entindexes[9][j], font = myFont, fill = fontcolor)
     posx = posx + deltax
 img.save("Indexes/Ent.png")
+
 numrows = 8
 generalindexes = [[0 for i in range(numcols)] for j in range(numrows)]
 generalindexes = [["112","001","002","140","022","020","027","062"], #1
@@ -79,7 +81,6 @@ generalindexes = [["112","001","002","140","022","020","027","062"], #1
               ["164","164","164","164","164","164","164","164"], #6
               ["164","164","164","164","164","164","164","164"], #7
               ["164","277","278","279"]] #8
-width = 1400
 height = 1260
 deltax = width / numcols
 deltay = height / numrows
@@ -103,6 +104,7 @@ for j in range(4):
     I.text((posx, posy), generalindexes[7][j], font = myFont, fill = fontcolor)
     posx = posx + deltax  
 img.save("Indexes/General.png")
+
 numrows = 7
 othersindexes = [[0 for i in range(numcols)] for j in range(numrows)]
 othersindexes = [["214","215","216","217","218","219","220","221"], #1
@@ -112,7 +114,6 @@ othersindexes = [["214","215","216","217","218","219","220","221"], #1
               ["164","164","164","164","164","164","164","164"],  #5
               ["164","164","164","164","164","164","164","164"],  #6
               ["164","164","164","212","213","224"]]  #7
-width = 1400
 height = 1080
 deltax = width / numcols
 deltay = height / numrows
@@ -136,6 +137,7 @@ for j in range(6):
     I.text((posx, posy), othersindexes[6][j], font = myFont, fill = fontcolor)
     posx = posx + deltax 
 img.save("Indexes/Others.png")
+
 numrows = 11
 workindexes = [[0 for i in range(numcols)] for j in range(numrows)]
 workindexes = [["030","031","014","032","033","034","088","089"], #1
@@ -149,7 +151,6 @@ workindexes = [["030","031","014","032","033","034","088","089"], #1
               ["164","164","164","164","164","164","164","164"],  #9
               ["164","164","164","164","164","164","164","164"],  #10
               ["164","164","164","259","267","268"]]  #11
-width = 1400
 height = 1700
 deltax = width / numcols
 deltay = height / numrows
