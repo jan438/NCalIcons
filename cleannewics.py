@@ -1,6 +1,5 @@
 import os
 import sys
-import shutil
 from pathlib import Path
 
 def find_all_occurrences(line, sub, f, t):
@@ -44,18 +43,13 @@ if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/NCalIcons/IconIndexes"
 os.chdir(path)
 src = "Ent.ics"
-bup = "Ent.bup"
-cleaned = "EntC.ics"
-shutil.copy(src, bup)
-inpfile = open(bup, 'rb')
-outfile = open(cleaned, 'wb')
+inpfile = open(src, 'rb')
 line = inpfile.read()
 BEGINVEVENT = "BEGIN:VEVENT".encode()
 BEGINVALARM = "BEGIN:VALARM".encode()
 ENDVALARM = "END:VALARM".encode()
 SUMMARY = "SUMMARY".encode()
 DESCRIPTION = "DESCRIPTION".encode()
-LOCATION = "LOCATION".encode()
 DTSTART = "DTSTART".encode()
 DTEND = "DTEND".encode()
 crlf = '\r\n'.encode()
@@ -70,7 +64,6 @@ dtstartpos = line.find(DTSTART)
 dtendpos = line.find(DTEND)
 summarypos = line.find(SUMMARY)
 descriptionpos = line.find(DESCRIPTION)
-locationpos = line.find(LOCATION)
 summaries = find_all_occurrences(line, SUMMARY, 0, len(line))
 descriptions = []
 icons = []
@@ -93,8 +86,6 @@ for i in range(len(descriptions)):
     while backslashpos > 0:
         line = process_backslash(line, backslashpos)
         backslashpos = line.find(backslash)
-outfile.write(line)
 inpfile.close()
-outfile.close()
-print(len(descriptions))
+print("Summaries", len(summaries), "Descriptions", len(descriptions))
 key = input("Wait")
