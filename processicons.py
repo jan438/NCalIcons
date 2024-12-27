@@ -33,7 +33,7 @@ line = inpfile.read()
 
 summarypos = line.find(SUMMARY)
 while summarypos > 0:
-    linebreakpos = line.find(linebreak)
+    linebreakpos = line.find(linebreak, summarypos)
     print(summarypos, linebreakpos)
     line = process_summarypos(line, summarypos)
     summarypos = line.find(SUMMARY)
