@@ -30,7 +30,7 @@ DESCRIPTION = "DESCRIPTION".encode()
 ICONPREFIX = '[i'.encode()
 summarypos = line.find(SUMMARY)
 while summarypos > 0:
-    print(line[summarypos])
+    print(line[summarypos+8:summarypos+13])
     line = process_summarypos(line, summarypos)
     summarypos = line.find(SUMMARY)
 inpfile.close()
