@@ -62,6 +62,7 @@ crlf = '\r\n'.encode()
 linebreak = '\r\n '.encode()
 backslash = "\\".encode()
 ORGANIZER = "ORGANIZER:mailto:local@newcalendar".encode()
+ICONPREFIX = '[i'.encode()
 organizers = find_all_occurrences(line, ORGANIZER, 0, len(line))
 line = process_organizers(line, organizers)
 neweventpos = line.find(BEGINVEVENT)
@@ -72,6 +73,7 @@ descriptionpos = line.find(DESCRIPTION)
 locationpos = line.find(LOCATION)
 summaries = find_all_occurrences(line, SUMMARY, 0, len(line))
 descriptions = []
+icons = []
 for i in range(len(summaries)):
     descriptionpos = line.find(DESCRIPTION, summaries[i])
     descriptions.append(descriptionpos)
@@ -80,12 +82,11 @@ for i in range(len(summaries)):
     if len(linebreaks) > 0:
         line = process_linebreaks(line, linebreaks)
 descriptions = find_all_occurrences(line, DESCRIPTION, 0, len(line))
-locations = []
 for i in range(len(descriptions)):
-    locationpos = line.find(LOCATION, descriptions[i])
-    locations.append(locationpos)
+    iconindexpos = line.find(ICONPREFIX, descriptions[i])
+    icons.append(iconindexpos)
 for i in range(len(descriptions)):
-    linebreaks = find_all_occurrences(line, linebreak, descriptions[i], locations[i])
+    linebreaks = find_all_occurrences(line, linebreak, descriptions[i], icons[i])
     if len(linebreaks) > 0:
         line = process_linebreaks(line, linebreaks)
     backslashpos = line.find(backslash)
@@ -95,4 +96,5 @@ for i in range(len(descriptions)):
 outfile.write(line)
 inpfile.close()
 outfile.close()
+print(len(descriptions))
 key = input("Wait")
