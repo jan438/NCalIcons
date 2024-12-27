@@ -5,6 +5,7 @@ from pathlib import Path
 SUMMARY = "SUMMARY".encode()
 DESCRIPTION = "DESCRIPTION".encode()
 ICONPREFIX = '[i'.encode()
+linebreak = '\r\n'.encode()
 
 def find_all_occurrences(line, sub, f, t):
     index_of_occurrences = []
@@ -32,7 +33,8 @@ line = inpfile.read()
 
 summarypos = line.find(SUMMARY)
 while summarypos > 0:
-    print(line[summarypos+8:summarypos+13])
+    linebreakpos = line.find(linebreak)
+    print(summarypos, linebreakpos)
     line = process_summarypos(line, summarypos)
     summarypos = line.find(SUMMARY)
 inpfile.close()
