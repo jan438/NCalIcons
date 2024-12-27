@@ -13,6 +13,10 @@ def find_all_occurrences(line, sub, f, t):
             index_of_occurrences.append(current_index)
             current_index += len(sub)
             
+def process_summarypos(line, pos):
+    processed = line[pos+1:]
+    return processed
+            
 if sys.platform[0] == 'l':
     path = '/home/jan/git/NCalIcons/IconIndexes'
 if sys.platform[0] == 'w':
@@ -25,6 +29,9 @@ SUMMARY = "SUMMARY".encode()
 DESCRIPTION = "DESCRIPTION".encode()
 ICONPREFIX = '[i'.encode()
 summarypos = line.find(SUMMARY)
-print(summarypos)
+while summarypos > 0:
+    print(line[summarypos])
+    line = process_summarypos(line, summarypos)
+    summarypos = line.find(SUMMARY)
 inpfile.close()
 key = input("Wait")
