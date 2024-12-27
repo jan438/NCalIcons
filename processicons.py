@@ -25,7 +25,6 @@ SUMMARY = "SUMMARY".encode()
 DESCRIPTION = "DESCRIPTION".encode()
 ICONPREFIX = '[i'.encode()
 summarypos = line.find(SUMMARY)
-for i in range(summarypos):
-    print(summarypos)
+print(summarypos)
 inpfile.close()
 key = input("Wait")
