@@ -2,6 +2,10 @@ import os
 import sys
 from pathlib import Path
 
+SUMMARY = "SUMMARY".encode()
+DESCRIPTION = "DESCRIPTION".encode()
+ICONPREFIX = '[i'.encode()
+
 def find_all_occurrences(line, sub, f, t):
     index_of_occurrences = []
     current_index = f
@@ -25,9 +29,7 @@ os.chdir(path)
 src = "Ent.ics"
 inpfile = open(src, 'rb')
 line = inpfile.read()
-SUMMARY = "SUMMARY".encode()
-DESCRIPTION = "DESCRIPTION".encode()
-ICONPREFIX = '[i'.encode()
+
 summarypos = line.find(SUMMARY)
 while summarypos > 0:
     print(line[summarypos+8:summarypos+13])
