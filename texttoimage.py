@@ -142,7 +142,7 @@ numrows = 11
 workindexes = [[0 for i in range(numcols)] for j in range(numrows)]
 workindexes = [["030","031","014","032","033","034","088","089"], #1
               ["003","007","012","015","016","017","036","035"],  #2
-              ["XXX","XXX","XXX","XXX","XXX","XXX","XXX","XXX"],  #3
+              ["037","040","041","042","097","045","046","047"],  #3
               ["XXX","XXX","XXX","XXX","XXX","XXX","XXX","XXX"],  #4
               ["XXX","XXX","XXX","XXX","XXX","XXX","XXX","XXX"],  #5
               ["XXX","XXX","XXX","XXX","XXX","XXX","XXX","XXX"],  #6
