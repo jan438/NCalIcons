@@ -85,6 +85,9 @@ while summarypos > 0:
     ncalicons.append(ncalicon)     
     summarypos = line.find(SUMMARY)
 inpfile.close()
+result = "Result.txt"
+outfile = open(result, 'w')  
 for i in range(len(ncalicons)):
-    print(ncalicons[i])
+    outfile.write(ncalicons[i])
+outfile.close()
 key = input("Wait")
