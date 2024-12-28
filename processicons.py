@@ -40,6 +40,51 @@ while summarypos > 0:
     ncalicons.append(ncalicon)     
     summarypos = line.find(SUMMARY)
 inpfile.close()
+src = "General.ics"
+inpfile = open(src, 'rb')
+line = inpfile.read()
+summarypos = line.find(SUMMARY)
+while summarypos > 0:
+    ncalicon = ""
+    linebreakpos = line.find(linebreak, summarypos)
+    ncalicon = ncalicon + line[summarypos+8:linebreakpos].decode('utf-8')
+    line = line[linebreakpos:]
+    descriptionpos = line.find(DESCRIPTION)
+    closingpos = line.find(ICONSUFFIX, descriptionpos)
+    ncalicon = ncalicon + ":" + line[descriptionpos+14:closingpos].decode('utf-8')
+    ncalicons.append(ncalicon)     
+    summarypos = line.find(SUMMARY)
+inpfile.close()
+src = "Others.ics"
+inpfile = open(src, 'rb')
+line = inpfile.read()
+summarypos = line.find(SUMMARY)
+while summarypos > 0:
+    ncalicon = ""
+    linebreakpos = line.find(linebreak, summarypos)
+    ncalicon = ncalicon + line[summarypos+8:linebreakpos].decode('utf-8')
+    line = line[linebreakpos:]
+    descriptionpos = line.find(DESCRIPTION)
+    closingpos = line.find(ICONSUFFIX, descriptionpos)
+    ncalicon = ncalicon + ":" + line[descriptionpos+14:closingpos].decode('utf-8')
+    ncalicons.append(ncalicon)     
+    summarypos = line.find(SUMMARY)
+inpfile.close()
+src = "Work.ics"
+inpfile = open(src, 'rb')
+line = inpfile.read()
+summarypos = line.find(SUMMARY)
+while summarypos > 0:
+    ncalicon = ""
+    linebreakpos = line.find(linebreak, summarypos)
+    ncalicon = ncalicon + line[summarypos+8:linebreakpos].decode('utf-8')
+    line = line[linebreakpos:]
+    descriptionpos = line.find(DESCRIPTION)
+    closingpos = line.find(ICONSUFFIX, descriptionpos)
+    ncalicon = ncalicon + ":" + line[descriptionpos+14:closingpos].decode('utf-8')
+    ncalicons.append(ncalicon)     
+    summarypos = line.find(SUMMARY)
+inpfile.close()
 for i in range(len(ncalicons)):
     print(ncalicons[i])
 key = input("Wait")
