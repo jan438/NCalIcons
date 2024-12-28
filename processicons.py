@@ -19,10 +19,6 @@ def find_all_occurrences(line, sub, f, t):
             index_of_occurrences.append(current_index)
             current_index += len(sub)
             
-def process_summarypos(line, pos):
-    processed = line[pos+1:]
-    return processed
-
 ncalicons = []
 if sys.platform[0] == 'l':
     path = '/home/jan/git/NCalIcons/IconIndexes'
@@ -37,7 +33,7 @@ while summarypos > 0:
     ncalicon = ""
     linebreakpos = line.find(linebreak, summarypos)
     ncalicon = ncalicon + line[summarypos+8:linebreakpos].decode('utf-8')
-    line = process_summarypos(line, summarypos)
+    line = line[linebreakpos:]
     descriptionpos = line.find(DESCRIPTION)
     closingpos = line.find(ICONSUFFIX, descriptionpos)
     ncalicon = ncalicon + ":" + line[descriptionpos+14:closingpos].decode('utf-8')
