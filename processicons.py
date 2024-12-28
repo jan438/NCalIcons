@@ -42,6 +42,7 @@ while summarypos > 0:
     ncalicon = ncalicon + line[summarypos+8:linebreakpos].decode('utf-8')
     line = process_summarypos(line, summarypos)
     descriptionpos = line.find(DESCRIPTION)
+    line = process_descriptionpos(line, descriptionpos)
     ncalicons.append(ncalicon)     
     summarypos = line.find(SUMMARY)
 inpfile.close()
