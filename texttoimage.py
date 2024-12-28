@@ -108,7 +108,7 @@ img.save("Indexes/General.png")
 numrows = 7
 othersindexes = [[0 for i in range(numcols)] for j in range(numrows)]
 othersindexes = [["214","215","216","217","218","219","220","221"], #1
-              ["152","XXX","XXX","XXX","XXX","XXX","XXX","XXX"],  #2
+              ["222","223","005","006","018","043","044","066"],  #2
               ["XXX","XXX","XXX","XXX","XXX","XXX","XXX","XXX"],  #3
               ["XXX","XXX","XXX","XXX","XXX","XXX","XXX","XXX"],  #4
               ["XXX","XXX","XXX","XXX","XXX","XXX","XXX","XXX"],  #5
