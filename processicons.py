@@ -36,9 +36,10 @@ while summarypos > 0:
     ncalicon = ""
     linebreakpos = line.find(linebreak, summarypos)
     ncalicon = ncalicon + line[summarypos+8:linebreakpos].decode('utf-8')
-    print(ncalicon)
     line = process_summarypos(line, summarypos)
     ncalicons.append(ncalicon)     
     summarypos = line.find(SUMMARY)
 inpfile.close()
+for i in range(len(ncalicons)):
+    print(ncalicons[i])
 key = input("Wait")
