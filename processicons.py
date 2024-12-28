@@ -19,9 +19,12 @@ def find_all_occurrences(line, sub, f, t):
             current_index += len(sub)
             
 def process_summarypos(line, pos):
-    ncaliconcode = "123"
     processed = line[pos+1:]
-    return (ncaliconcode, processed)
+    return processed
+
+def process_descriptionpos(line, pos):
+    processed = line[pos+1:]
+    return processed
 
 ncalicons = []
 if sys.platform[0] == 'l':
@@ -37,8 +40,8 @@ while summarypos > 0:
     ncalicon = ""
     linebreakpos = line.find(linebreak, summarypos)
     ncalicon = ncalicon + line[summarypos+8:linebreakpos].decode('utf-8')
-    (ncaliconcode, line) = process_summarypos(line, summarypos)
-    ncalicon = ncalicon + ncaliconcode
+    line = process_summarypos(line, summarypos)
+    descriptionpos = line.find(DESCRIPTION)
     ncalicons.append(ncalicon)     
     summarypos = line.find(SUMMARY)
 inpfile.close()
