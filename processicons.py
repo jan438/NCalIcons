@@ -88,6 +88,6 @@ inpfile.close()
 result = "Result.txt"
 outfile = open(result, 'w')  
 for i in range(len(ncalicons)):
-    outfile.write(ncalicons[i])
+    outfile.write(ncalicons[i] + '\r\n')
 outfile.close()
 key = input("Wait")
