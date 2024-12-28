@@ -22,10 +22,6 @@ def process_summarypos(line, pos):
     processed = line[pos+1:]
     return processed
 
-def process_descriptionpos(line, pos):
-    processed = line[pos+1:]
-    return processed
-
 ncalicons = []
 if sys.platform[0] == 'l':
     path = '/home/jan/git/NCalIcons/IconIndexes'
@@ -43,7 +39,7 @@ while summarypos > 0:
     line = process_summarypos(line, summarypos)
     descriptionpos = line.find(DESCRIPTION)
     linebreakpos = line.find(linebreak, descriptionpos)
-    ncalicon = ncalicon + line[descriptionpos+8:linebreakpos].decode('utf-8')
+    ncalicon = ncalicon + ":" + line[descriptionpos+14:linebreakpos].decode('utf-8')
     ncalicons.append(ncalicon)     
     summarypos = line.find(SUMMARY)
 inpfile.close()
