@@ -21,7 +21,8 @@ def find_all_occurrences(line, sub, f, t):
 def process_summarypos(line, pos):
     processed = line[pos+1:]
     return processed
-            
+
+ncalicons = []
 if sys.platform[0] == 'l':
     path = '/home/jan/git/NCalIcons/IconIndexes'
 if sys.platform[0] == 'w':
@@ -30,12 +31,14 @@ os.chdir(path)
 src = "Ent.ics"
 inpfile = open(src, 'rb')
 line = inpfile.read()
-
 summarypos = line.find(SUMMARY)
 while summarypos > 0:
+    ncalicon = ""
     linebreakpos = line.find(linebreak, summarypos)
-    print(line[summarypos+8:linebreakpos])
+    ncalicon = ncalicon + line[summarypos+8:linebreakpos].decode('utf-8')
+    print(ncalicon)
     line = process_summarypos(line, summarypos)
+    ncalicons.append(ncalicon)     
     summarypos = line.find(SUMMARY)
 inpfile.close()
 key = input("Wait")
