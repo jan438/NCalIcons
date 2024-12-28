@@ -109,7 +109,7 @@ numrows = 7
 othersindexes = [[0 for i in range(numcols)] for j in range(numrows)]
 othersindexes = [["214","215","216","217","218","219","220","221"], #1
               ["222","223","005","006","018","043","044","066"],  #2
-              ["XXX","XXX","XXX","XXX","XXX","XXX","XXX","XXX"],  #3
+              ["067","070","076","077","079","080","081","086"],  #3
               ["XXX","XXX","XXX","XXX","XXX","XXX","XXX","XXX"],  #4
               ["XXX","XXX","XXX","XXX","XXX","XXX","XXX","XXX"],  #5
               ["XXX","XXX","XXX","XXX","XXX","XXX","XXX","XXX"],  #6
