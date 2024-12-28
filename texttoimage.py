@@ -75,7 +75,7 @@ numrows = 8
 generalindexes = [[0 for i in range(numcols)] for j in range(numrows)]
 generalindexes = [["112","001","002","140","022","020","027","062"], #1
               ["023","024","008","009","010","011","013","019"], #2
-              ["XXX","XXX","XXX","XXX","XXX","XXX","XXX","XXX"], #3
+              ["021","090","003","026","025","028","029","095"], #3
               ["XXX","XXX","XXX","XXX","XXX","XXX","XXX","XXX"], #4
               ["XXX","XXX","XXX","XXX","XXX","XXX","XXX","XXX"], #5
               ["XXX","XXX","XXX","XXX","XXX","XXX","XXX","XXX"], #6
