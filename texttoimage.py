@@ -39,7 +39,7 @@ entindexes = [[0 for i in range(numcols)] for j in range(numrows)]
 entindexes = [["263","225","171","266","264","265","153","176"], #1
               ["152","164","183","160","157","063","182","191"], #2
               ["038","154","186","190","232","273","269","165"], #3
-              ["XXX","XXX","XXX","XXX","XXX","XXX","XXX","XXX"], #4
+              ["138","059","242","250","175","262","179","172"], #4
               ["XXX","XXX","XXX","XXX","XXX","XXX","XXX","XXX"], #5
               ["XXX","XXX","XXX","XXX","XXX","XXX","XXX","XXX"], #6
               ["XXX","XXX","XXX","XXX","XXX","XXX","XXX","XXX"], #7
