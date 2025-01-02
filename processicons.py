@@ -25,21 +25,21 @@ if sys.platform[0] == 'l':
 if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/NCalIcons/IconIndexes"
 os.chdir(path)
-src = "Ent.ics"
-inpfile = open(src, 'rb')
-line = inpfile.read()
-summarypos = line.find(SUMMARY)
-while summarypos > 0:
-    ncalicon = ""
-    linebreakpos = line.find(linebreak, summarypos)
-    ncalicon = ncalicon + line[summarypos+8:linebreakpos].decode('utf-8')
-    line = line[linebreakpos:]
-    descriptionpos = line.find(DESCRIPTION)
-    closingpos = line.find(ICONSUFFIX, descriptionpos)
-    ncalicon = ncalicon + ":" + line[descriptionpos+14:closingpos].decode('utf-8')
-    ncalicons.append(ncalicon)     
-    summarypos = line.find(SUMMARY)
-inpfile.close()
+#src = "Ent.ics"
+#inpfile = open(src, 'rb')
+#line = inpfile.read()
+#summarypos = line.find(SUMMARY)
+#while summarypos > 0:
+#    ncalicon = ""
+#    linebreakpos = line.find(linebreak, summarypos)
+#    ncalicon = ncalicon + line[summarypos+8:linebreakpos].decode('utf-8')
+#    line = line[linebreakpos:]
+#    descriptionpos = line.find(DESCRIPTION)
+#    closingpos = line.find(ICONSUFFIX, descriptionpos)
+#    ncalicon = ncalicon + ":" + line[descriptionpos+14:closingpos].decode('utf-8')
+#    ncalicons.append(ncalicon)     
+#    summarypos = line.find(SUMMARY)
+#inpfile.close()
 #src = "General.ics"
 #inpfile = open(src, 'rb')
 #line = inpfile.read()
